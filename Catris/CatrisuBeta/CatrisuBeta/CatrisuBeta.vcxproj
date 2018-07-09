@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{14338E54-D038-4894-8039-0CE59D44437E}</ProjectGuid>
+    <RootNamespace>CatrisuBeta</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib/x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib/x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib/x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(DXSDK_DIR)Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(DXSDK_DIR)Lib/x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Library\DirectInput\DirectInput.cpp" />
+    <ClCompile Include="Main\Application\Application.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ConfigScene\ConfigBackGround\ConfigBackGround.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ConfigScene\ConfigScene.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameBackGround\GameBackGround.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameBlock\GameBlock.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameHold\GameHold.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameScene.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameScore\GameScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameScore\HightScore\HightScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\GameScore\NomalScore\NomalScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\MainGameFrame\MainGameFrame.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\NextFrame\NextFrame.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultArrow\ResultArrow.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultBackGround\ResultBackGround.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultLogo\ResultLogo.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultReturnTitle\ResultReturnTitle.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultContinue\ResultContinue.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultScene.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultScore\ResultHightScore\ResultHightScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultScore\ResultNomalScore\ResultNomalScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\ResultScene\ResultScore\ResultScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\SceneManager.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleArrow\TitleArrow.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleBackGround\TitleBackGround.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleConfigration\TitleConfigration.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleEnd\TitleEnd.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleLogo\TitleLogo.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleNext\TitleNext.cpp" />
+    <ClCompile Include="Main\Application\Scenes\TitleScene\TitleScene.cpp" />
+    <ClCompile Include="Main\Main.cpp" />
+    <ClCompile Include="Main\Render\Render.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Library\DirectInput\DirectInput.h" />
+    <ClInclude Include="Main\Application\Application.h" />
+    <ClInclude Include="Main\Application\Scenes\ConfigScene\ConfigBackGround\ConfigBackGround.h" />
+    <ClInclude Include="Main\Application\Scenes\ConfigScene\ConfigScene.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameBackGround\GameBackGround.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameBlock\GameBlock.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameHold\GameHold.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameScene.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameScore\GameScore.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameScore\HightScore\HightScore.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\GameScore\NomalScore\NomalScore.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\MainGameFrame\MainGameFrame.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\NextFrame\NextFrame.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultArrow\ResultArrow.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultBackGround\ResultBackGround.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultLogo\ResultLogo.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultReturnTitle\ResultReturnTitle.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultContinue\ResultContinue.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultScene.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultScore\ResultHightScore\ResultHightScore.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultScore\ResultNomalScore\ResultNomalScore.h" />
+    <ClInclude Include="Main\Application\Scenes\ResultScene\ResultScore\ResultScore.h" />
+    <ClInclude Include="Main\Application\Scenes\SceneManager.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleArrow\TitleArrow.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleBackGround\TitleBackGround.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleConfigration\TitleConfigration.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleEnd\TitleEnd.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleLogo\TitleLogo.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleNext\TitleNext.h" />
+    <ClInclude Include="Main\Application\Scenes\TitleScene\TitleScene.h" />
+    <ClInclude Include="Main\Main.h" />
+    <ClInclude Include="Main\Render\Render.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
