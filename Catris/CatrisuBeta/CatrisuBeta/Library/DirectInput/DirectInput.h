@@ -2,7 +2,10 @@
 #define	DIRECTINPUT_H
 
 #include <Windows.h>
+#include <dinput.h>
 
+extern LPDIRECTINPUT8 pDinput;
+extern LPDIRECTINPUTDEVICE8 pKeyDevice;
 
 enum KEYSTATE
 {

@@ -3,21 +3,29 @@
 #include "GameHold\GameHold.h"
 #include "GameScore\GameScore.h"
 #include "NextFrame\NextFrame.h"
-//#include "FeverMode\"
 #include "MainGameFrame\MainGameFrame.h"
+//#include "FeverMode\"
 //#include "GameBlock\"
+//#include "GameRender\GameRender.h"
+//#include "GameUpdate\GameUpdate.h"
 
+#include "Game\Game.h"
 
 void GameSceneDraw()
 {
-	GameBackGroundDraw();
+	/*GameBackGroundDraw();
 	MainFrameDraw();
 	NextFrameDraw();
 	GameScoreDraw();
-	GameHoldDraw();
+	GameHoldDraw();*/
+}
+void GameSceneUpdate()
+{
+
 }
 
 void GameSceneRun()
 {
-	GameSceneDraw();
+	//GameSceneDraw();
+	GameRun();
 }

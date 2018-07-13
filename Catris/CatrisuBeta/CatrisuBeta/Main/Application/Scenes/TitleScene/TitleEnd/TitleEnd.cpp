@@ -5,10 +5,10 @@ void TitleEndDraw()
 {
 	CUSTOMVERTEX TitleEnd[]
 	{
-		{ 332.f, 460.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 0.f },
-		{ 922.f, 460.f, 1.f, 1.f, 0xFFFFFFFF, 1.f, 0.f },
-		{ 922.f, 590.f, 1.f, 1.f, 0xFFFFFFFF, 1.f, 1.f },
-		{ 332.f, 590.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 1.f }
+		{ 332.f, 450.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 0.f },
+		{ 922.f, 450.f, 1.f, 1.f, 0xFFFFFFFF, 1.f, 0.f },
+		{ 922.f, 570.f, 1.f, 1.f, 0xFFFFFFFF, 1.f, 1.f },
+		{ 332.f, 570.f, 1.f, 1.f, 0xFFFFFFFF, 0.f, 1.f }
 	};
 
 	g_pD3Device->SetTexture(0, g_pTexture[TITLE_END_TEX]);

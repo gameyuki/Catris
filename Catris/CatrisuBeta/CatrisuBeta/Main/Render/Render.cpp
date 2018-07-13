@@ -2,6 +2,7 @@
 #include <d3dx9.h>
 #include "Render.h"
 #include "Main\Main.h"
+#include "Main\Application\Scenes\GameScene\Game\GameInitialize\GameInitialize.h"
 
 void SetTexture()
 {
@@ -75,4 +76,6 @@ void LoadTexture()
 	CreateTexture("Resourse/リザルトフレーム/title_return.png", RESULT_RETURNTITLE_TEX);
 	CreateTexture("Resourse/リザルトフレーム/score_frame_2.png", RESULT_NOMALSCOREFRAME_TEX);
 	CreateTexture("Resourse/リザルトフレーム/highscore_frame_2.png", RESULT_HIGHTSCOREFRAME_TEX);
+
+	CreateTextureFromFile();
 }

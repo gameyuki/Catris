@@ -7,10 +7,10 @@ void HightScoreDraw()
 {
 	CUSTOMVERTEX HightScoreFrame[] = 
 	{
-		{ 675.f,   550.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 0.f },
-		{ 935.f,   550.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 0.f },
-		{ 935.f,   670.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 1.f },
-		{ 675.f,   670.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 1.f }
+		{ 675.f, 580.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 0.f },
+		{ 945.f, 580.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 0.f },
+		{ 945.f, 700.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 1.f },
+		{ 675.f, 700.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 1.f }
 	};
 
 	g_pD3Device->SetTexture(0, g_pTexture[GAME_HIGHTSCOREFRAME_TEX]);

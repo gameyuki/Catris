@@ -131,17 +131,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Library\DirectFont\DirectFont.cpp" />
     <ClCompile Include="Library\DirectInput\DirectInput.cpp" />
+    <ClCompile Include="Library\DirectSound\DirectSound.cpp" />
     <ClCompile Include="Main\Application\Application.cpp" />
     <ClCompile Include="Main\Application\Scenes\ConfigScene\ConfigBackGround\ConfigBackGround.cpp" />
     <ClCompile Include="Main\Application\Scenes\ConfigScene\ConfigScene.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameBackGround\GameBackGround.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameBlock\GameBlock.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameHold\GameHold.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\Game\Game.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\Game\GameCommon\GameCommon.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\Game\GameInitialize\GameInitialize.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\Game\GameRender\GameRender.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameScene.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameScore\GameScore.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameScore\HightScore\HightScore.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\GameScore\NomalScore\NomalScore.cpp" />
+    <ClCompile Include="Main\Application\Scenes\GameScene\Game\GameUpdate\GameUpdate.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\MainGameFrame\MainGameFrame.cpp" />
     <ClCompile Include="Main\Application\Scenes\GameScene\NextFrame\NextFrame.cpp" />
     <ClCompile Include="Main\Application\Scenes\ResultScene\ResultArrow\ResultArrow.cpp" />
@@ -165,17 +172,24 @@
     <ClCompile Include="Main\Render\Render.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Library\DirectFont\DirectFont.h" />
     <ClInclude Include="Library\DirectInput\DirectInput.h" />
+    <ClInclude Include="Library\DirectSound\DirectSound.h" />
     <ClInclude Include="Main\Application\Application.h" />
     <ClInclude Include="Main\Application\Scenes\ConfigScene\ConfigBackGround\ConfigBackGround.h" />
     <ClInclude Include="Main\Application\Scenes\ConfigScene\ConfigScene.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameBackGround\GameBackGround.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameBlock\GameBlock.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameHold\GameHold.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\Game\Game.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\Game\GameCommon\GameCommon.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\Game\GameInitialize\GameInitialize.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\Game\GameRender\GameRender.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameScene.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameScore\GameScore.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameScore\HightScore\HightScore.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\GameScore\NomalScore\NomalScore.h" />
+    <ClInclude Include="Main\Application\Scenes\GameScene\Game\GameUpdate\GameUpdate.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\MainGameFrame\MainGameFrame.h" />
     <ClInclude Include="Main\Application\Scenes\GameScene\NextFrame\NextFrame.h" />
     <ClInclude Include="Main\Application\Scenes\ResultScene\ResultArrow\ResultArrow.h" />

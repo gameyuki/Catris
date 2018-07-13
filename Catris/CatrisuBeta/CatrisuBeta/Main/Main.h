@@ -3,6 +3,7 @@
 
 #include <Windows.h>
 #include <d3dx9.h>
+#include <dsound.h>
 
 
 #define SAFE_RELEASE(p){if(p){(p)->Release();(p)=NULL;}}
@@ -44,6 +45,43 @@ enum TEXTURE
 	RESULT_NOMALSCOREFRAME_TEX,		//<<リザルト画面のノーマルスコア用フレーム
 	RESULT_HIGHTSCOREFRAME_TEX,		//<<リザルト画面のハイスコア用フレーム
 	RESULT_RETURNTITLE_TEX,			//<<リザルト画面のタイトル画面へ戻る用
+
+	g_backgroundTex,
+	g_frameTex,
+	g_feverbackgroundTex,
+	g_feverframeTex,
+
+	g_backgroundTex2,
+	g_frameTex2,
+	g_feverbackgroundTex2,
+	g_feverframeTex2,
+
+	g_feverbackgroundTex3,
+	g_feverframeTex3,
+
+	g_feverbackgroundTex4,
+	g_feverframeTex4,
+
+	g_feverbackgroundTex5,
+	g_feverframeTex5,
+
+	g_holdFrameTex,
+	g_gaugeTex,
+	g_gaugeFiverTex,
+	g_scoreFrameTex,
+	g_highScoreFrameTex,
+
+	g_nextFrameTex,
+
+	g_feverStr,
+	g_gameoverStrTex,
+
+	g_tetminoTex,
+
+	g_nexttetminoTex,
+
+	g_feverBlockTex,
+
 	TEXMAX
 };
 
@@ -56,6 +94,24 @@ enum Scenes
 	RESULT_SCENE,
 	CONFIG_SCENE,
 	SCENE_MAX
+};
+
+enum FONT
+{
+	g_gameoverFont,
+	g_currentscoreFont,
+	g_currenthighscoreFont,
+	g_nextFont,
+	g_countFont,
+	g_countshowFont,
+	g_normalFont,
+	g_feverFont,
+	g_fevertimerFont,
+	g_fevertimeshowFont,
+	g_fevergaugeshowFont,
+	g_falllevelFont,
+	g_falllevelshowFont,
+	g_fontMax
 };
 
 //	ブロックの数を決める数字は定数化しておきます
@@ -72,6 +128,7 @@ extern IDirect3DDevice9*	  g_pD3Device;		//	Direct3Dのデバイス
 extern D3DPRESENT_PARAMETERS g_D3dPresentParameters;		//	パラメータ
 extern D3DDISPLAYMODE		  g_D3DdisplayMode;
 extern IDirect3D9*			  g_pDirect3D;		//	Direct3Dのインターフェイス
-
+extern LPD3DXFONT g_pFont[g_fontMax];
+extern IDirectSound8* pDS8;
 
 #endif

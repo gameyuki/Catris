@@ -2,6 +2,7 @@
 #include "Main\Main.h"
 #include "Library\DirectInput\DirectInput.h"
 #include "Main\Application\Scenes\SceneManager.h"
+#include "Main\Application\Scenes\GameScene\Game\GameUpdate\GameUpdate.h"
 #include <dinput.h>
 
 static int g_MovePower = 0;
@@ -27,19 +28,36 @@ void ResultArrowUpdate()
 	KeyCheckDinput(&key[DIK_W], DIK_W);
 	KeyCheckDinput(&key[DIK_S], DIK_S);
 
-	if (key[DIK_W] == PUSH)
+	if (g_MovePower == 870)
 	{
-		g_MovePower -= 870.f;
+		if (key[DIK_W] == PUSH)
+		{
+			g_MovePower -= 870.f;
+		}
 	}
 
-	if (key[DIK_S] == PUSH)
+	if (g_MovePower == 0)
 	{
-		g_MovePower += 870.f;
+		if (key[DIK_S] == PUSH)
+		{
+			g_MovePower += 870.f;
+		}
 	}
 
 	if (key[DIK_RETURN] == PUSH)
 	{
 
+		isGameover = false;
+		MainInit();
+
+		if (g_MovePower == 0)
+		{
+			g_scenes = TITLE_SCENE;
+		}
+		else if (g_MovePower == 870)
+		{
+			g_scenes = GAME_SCENE;
+		}
 	}
 }
 

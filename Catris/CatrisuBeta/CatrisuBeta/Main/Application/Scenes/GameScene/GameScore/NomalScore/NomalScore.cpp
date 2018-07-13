@@ -7,8 +7,8 @@ void NomalScoreDraw()
 {
 	CUSTOMVERTEX NomalScoreFrame[] =
 	{
-		{ 670.f,   430.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 0.f },
-		{ 940.f,   430.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 0.f },
+		{ 670.f, 430.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 0.f },
+		{ 940.f, 430.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 0.f },
 		{ 940.f, 550.f, 1.f,1.f, 0xFFFFFFFF, 1.f, 1.f },
 		{ 670.f, 550.f, 1.f,1.f, 0xFFFFFFFF, 0.f, 1.f }
 	};

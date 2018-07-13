@@ -47,21 +47,24 @@ void TitleArrowUpdate()
 	if (key[DIK_RETURN] == PUSH)
 	{
 		//TODO フェードイン、フェードアウトを入れる？企画の人に聞く 
-		//当たり判定?
 		//ゲーム開始
 		if (g_MovePower == 0)
 		{
+			g_MovePower = 0;
 			g_scenes = GAME_SCENE;
 		}
 		//終了
 		else if (g_MovePower == 120)
 		{
+			g_MovePower = 0;
 			PostQuitMessage(0);
 		}
 		//設定画面
 		else if(g_MovePower == 240)
 		{
 			g_scenes = RESULT_SCENE;
+			g_MovePower = 0;
+			//本当はこれ
 			//g_scenes = CONFIG_SCENE;
 		}
 	}

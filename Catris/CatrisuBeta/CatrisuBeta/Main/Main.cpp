@@ -9,6 +9,8 @@
 #include "Application\Scenes\SceneManager.h"
 #include "Render\Render.h"
 #include "Library\DirectInput\DirectInput.h"
+#include "Library\DirectFont\DirectFont.h"
+#include "Library\DirectSound\DirectSound.h"
 
 #define TITLE TEXT ("Catris")
 #define WIDTH	1280
@@ -26,6 +28,8 @@ IDirect3DDevice9*	  g_pD3Device;		//	Direct3Dのデバイス
 D3DPRESENT_PARAMETERS g_D3dPresentParameters;		//	パラメータ
 D3DDISPLAYMODE		  g_D3DdisplayMode;
 IDirect3D9*			  g_pDirect3D;		//	Direct3Dのインターフェイス
+LPD3DXFONT g_pFont[g_fontMax];
+IDirectSound8 *pDS8;
 
 void FreeDx()
 {
@@ -36,6 +40,12 @@ void FreeDx()
 
 	ReleaseKey();
 	ReleaseDiput();
+
+	for (int coordinateX = 0; coordinateX < g_fontMax; coordinateX++)
+	{
+		SAFE_RELEASE(g_pFont[coordinateX]);
+	}
+
 	SAFE_RELEASE(g_pD3Device);
 	SAFE_RELEASE(g_pDirect3D);
 }
@@ -111,7 +121,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInsta, LPSTR szStr, INT i
 	g_D3dPresentParameters.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	g_D3dPresentParameters.Windowed = TRUE;
 
-	//TODO フルスクリーンは出来ていないのでやれる時にやる
+	// フルスクリーンは出来ていないのでやれる時にやる
 	//フルスクリーン用
 	//ZeroMemory(&g_D3dPresentParameters, sizeof(D3DPRESENT_PARAMETERS));
 	//g_D3dPresentParameters.BackBufferWidth = 2256;
@@ -161,6 +171,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInsta, LPSTR szStr, INT i
 	//DirectInputの初期化
 	InitDinput();
 	InitDinputKey(hWnd);
+
+	if (FAILED(InitDfont(hWnd)))
+	{
+		return 0;
+	}
+
+	InitDSound(hWnd, &pDS8);
 
 	//画像の読み込み・設定
 	SetTexture();
